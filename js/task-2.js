@@ -8,22 +8,24 @@
 // Візьми код нижче з ініціалізацією екземпляра й викликами методів і встав його після оголошення класу для перевірки коректності роботи. У консоль будуть виведені результати їх роботи. Будь ласка, нічого там не змінюй.
 
 class Storage {
+  #items;
+
   constructor(items) {
-    this.items = items;
+    this.#items = items;
   }
 
   getItems() {
-    return this.items;
+    return this.#items;
   }
 
   addItem(newItem) {
-    this.items.push(newItem);
+    this.#items.push(newItem);
   }
 
   removeItem(itemToRemove) {
-    const indexToRemove = this.items.indexOf(itemToRemove);
+    const indexToRemove = this.#items.indexOf(itemToRemove);
     if (indexToRemove !== -1) {
-      this.items.splice(indexToRemove, 1);
+      this.#items.splice(indexToRemove, 1);
     }
   }
 }
